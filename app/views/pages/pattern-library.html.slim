@@ -1,0 +1,284 @@
+- title "Pattern Library"
+#pattern-library
+#introduction.section
+  .col-9.pos-center
+    h1 Roomstyler Pattern Library
+  .col-7.pos-center
+    p During the building of the new Roompage, I needed to test every module outside of the roompage to see if it is truly modular. This soon started to look like a Pattern Library. Since a decent pattern library can be a timesaver for all of us, I decided to give it a little extra effort and turn it into a real pattern library for everyone to use. See it as documentation for our new design.
+    p ps. Work in progress
+
+#table-of-contents.section
+  .col-7.pos-center.centered
+    h2 Table of Contents
+    ul
+      li
+       a href="#graphical-elements" Graphical Elements
+      li
+        a href="#typography" Typography
+      li
+        a href="#buttons" Buttons
+      li
+        a href="#navigation" Navigation
+      li
+        a href="#modals" Modals
+.clearfix
+#graphical-elements
+  .col-9.pos-center
+    h2.centered Graphical Elements
+.cover style="background-image: url('/assets/test-cover.jpeg'); background: linear-gradient(
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.2) 80%, 
+      rgba(0, 0, 0, 0.3) 100%
+    ), url('/assets/test-cover.jpeg'); background-size: cover;"
+  .cover-content
+    h1.title Room title
+    a.cover-corner-left.designer href="#"
+      .avatar.avatar-normal.avatar-bordered
+        img src="assets/test-avatar.jpeg"
+      .name-wrapper
+        .label Designed by
+        .name Katarina Volare
+    .cover-corner-right
+      a.btn.btn-white.btn-love Love It!
+      a.btn.btn-white.btn-circled.open-menu
+        i.fa.fa-plus
+    .menu.push-up
+      ul.menu-list
+        li
+          a href="#"
+            i.fa.fa-random
+            span Remix
+        li
+          a href="#hd-modal" rel="modal:open"
+            i.fa.fa-star
+            span Create HD Render
+        li
+          a href="#4k-modal" rel="modal:open"
+            i.fa.fa-star
+            span Create 4K Render
+.col-7.pos-center
+  h3 Cover
+  p Oftentimes we will use a full screen cover at the top of a page. In the cover all kinds of information can be displayed, such as Room titles, buttons, and so on. On top of the cover we display a gradient from transparent to transparent-black, so that the text is always readable, also when the design is a light room.
+  p Important note; when you want to use a cover, the .cover div should be placed immediately in the body. If it is placed inside a parent div, it will not cover the whole browser window.
+  .span.comment-alert The gradient is not in the CSS, but hardcoded in the html... :(
+.col-7.pos-center
+  h3 Avatars
+  p We use avatars quite often. They come in several flavours.
+  table
+    tr
+      td
+        .avatar.avatar-small
+          img src="assets/test-avatar.jpeg"
+      td
+        p Small sized avatar
+    tr
+      td
+        .avatar.avatar-normal
+          img src="assets/test-avatar.jpeg"
+      td
+        p Normal sized avatar
+    tr
+      td
+        .avatar.avatar-normal.avatar-bordered
+          img src="assets/test-avatar.jpeg"
+      td
+        p Avatar with a white border (for dark backgrounds)
+
+#typography.section
+.col-9.pos-center
+  h2.centered Typography
+  .col-7.pos-center
+    p
+      = "The default font-family is 'Lato'. Most of the time our text-weight is 'light'."
+      br
+      br
+      = "N.B. Typography is still a thing I'm struggling with. During my design process I've played around with the idea of making the grid both dependent on the screen-width and on the font-size. The other thing I want to accomplish is that all elements on the page scale according to the device it is shown on. Anyways, for now I've settled on making the grid and the font-size static sizes and look into responsiveness later on."
+  .col-9.pos-center
+    h3 Headings
+    br
+    table
+      tr
+        td
+          h1 Heading 1
+        td
+          span.comment 3.3333em/1.2em
+      tr
+        td
+          h2 Heading 2
+        td
+          span.comment 2em/1.2em
+      tr
+        td
+          h3 Heading 3
+        td
+          span.comment 1.3333em/1.2em
+    br
+    br
+  .col-7.pos-center
+    h3 Paragraphs
+    br
+    p
+      = "At eight o'clock the sledge was ready to start.  The passengers took their places on it, and wrapped themselves up closely in their travelling-cloaks.  The two great sails were hoisted, and under the pressure of the wind the sledge slid over the hardened snow with a velocity of forty miles an hour."
+    span.comment Base font-size of 18px with a line-height of 1.56em
+    br
+    br
+    p.small-font
+      = "At eight o'clock the sledge was ready to start.  The passengers took their places on it, and wrapped themselves up closely in their travelling-cloaks.  The two great sails were hoisted, and under the pressure of the wind the sledge slid over the hardened snow with a velocity of forty miles an hour."
+    span.comment Small font-size of 14px with a line-height of 1.56em
+    br
+    br
+    p.x-small-font
+      = "At eight o'clock the sledge was ready to start.  The passengers took their places on it, and wrapped themselves up closely in their travelling-cloaks.  The two great sails were hoisted, and under the pressure of the wind the sledge slid over the hardened snow with a velocity of forty miles an hour."
+    span.comment Smaller font-size of 12px with a line-height of 1.56em
+    br
+    br
+  .col-9.pos-center
+    h3 Utilities
+    br
+    table
+      tr
+        td
+          p
+            = "You have 34 "
+            span.credit credits
+            = " available."
+        td To make the credits stand out and make the word feel more like an entity, it needs to be styled a little different from the rest of the text. Simply by putting the word 'Credits' in a span with the class 'credit' it will uppercase the word and scale down the font relatively to the size of the rest of the span.
+      tr
+        td
+          span.label Designed by
+        td Sometimes it comes in handy to add a little label above a text, to indicate what kind of info is showed. Let me give an example: the label can indicate whether someone designed a room or remixed it. I suppose we will have more usecases in the future.
+      tr
+        td
+          .centered This is centered text
+        td When you want to align a text in the center, yu can simply do that by adding the .centered class. Works only on a display:block element.
+      
+#buttons.section
+  .col-9.pos-center
+    h2.centered Buttons
+  .col-7.pos-center
+    p We have several kinds of buttons and they might look different depending on their background. For example; in the case we lay buttons on top of room renders, the buttons need to look different than when they're on placed on a white background. Below I'll show and explain you the differences.
+    br
+
+    h3 Basic Buttons
+    .col-600.pos-center
+      p Below you see examples of our basic buttons used on a white background.
+    .col-780.pos-center
+      table
+        tr
+          td
+            a.btn.btn-grey Ordinary Button
+          td This is the most common button we have
+        tr
+          td
+            a.btn.btn-cta Call to Action
+          td We use this button whenever we have a call to action
+        tr
+          td
+            a.btn.btn-grey.btn-love Love It!
+          td When a user wants to like a design, we use this button
+    br
+    br
+    .col-600.pos-center
+      p Often we will need to put a button on top of a dark or image background. In these cases our buttons need to behave a little different.
+    .col-780.pos-center
+      table
+        tr
+          td
+            a.btn.btn-white Ordinary Button
+          td This is the most common button we have
+        tr
+          td
+            a.btn.btn-cta Call to Action
+          td
+            span.comment-alert This does not look good. We will probably need a Call-to-action button on a dark background one day, right? How will this look?
+        tr
+          td
+            a.btn.btn-white.btn-love Love It!
+          td Our love button will look better on a dark background with a white border around it.
+    br
+    br
+    h3 Split Button
+    .col-600.pos-center
+      p Sometimes a button needs to say two things at once. The most apparent example here is a payment button. You want the button to call to action and tell the user the amount of credits they're gonna spend.
+      br
+      div
+        .btn.btn-cta
+          span.btn-split-left Buy 4K Render
+          span.btn-split-right
+            = "2 "
+            span.credit Credits
+    br
+    br
+    h3 Extra Options Button
+    .col-600.pos-center
+      p Because we don't want to clutter the interface, I've introduced an 'Extra Options Button'. It's a fancy term for a circled button with a plus. Hovering, or tapping, this button reveals a menu where the user can choose extra options.
+      br
+    .col-780.pos-center
+      table
+        tr
+          td
+            a.btn.btn-white.btn-options-menu
+              i.fa.fa-plus
+            .options-wrapper
+              ul.options-menu
+                li
+                  a href="#"
+                    i.fa.fa-random
+                    span Remix
+                    span
+                li
+                  a href="#hd-modal" rel="modal:open"
+                    i.fa.fa-star
+                    span Create HD Render
+                    span
+                li
+                  a href="#4k-modal" rel="modal:open"
+                    i.fa.fa-star
+                    span Create 4K Render
+                    span
+          td Coming Soon!
+        tr
+          td
+            span
+              = "Options menu opens above button."
+              br
+              br
+              = "Button and menu always need to be contained by an element with a relative position. At the moment, the options-menu button is only used in the right bottom corner of a cover, so I did not make it so flexible that it can be placed anywhere on the page and that there's some kind of check where the menu needs to open."
+            br
+            span.comment-alert The way I implemented it is not fully modular. Could need some help here.
+          td
+            span Options menu opens below button
+    br
+    br
+
+#navigation.section
+  h2 Navigation
+  .col-780.pos-center
+    h3 Tabs
+    div
+      ul.tabs
+          li
+            a.active href="#"
+              = "Related Rooms"
+          li
+            a  href="#"
+              = "23 Comments"
+          li
+            a  href="#"
+              = "Loved by"
+    br
+    br
+    br
+
+#modals.section
+  h2 Modals
+  a.btn href="#modal-example" rel="modal:open" Open Modal
+
+#modal-example
+  span.modal-title Modal title
+  span.modal-tagline Modal tagline (optional)
+  p Modal content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  a.btn href="#" Button
+
+#grid
+

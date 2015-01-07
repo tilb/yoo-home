@@ -1,0 +1,73 @@
+.footer
+  background-color: $mintwhite
+  height: 218px
+  position: relative
+  font-family: Helvetica, Arial, sans-serif
+  font-size: $small
+  padding-top: 24px
+  margin-top: 90px
+
+  .footer-category
+    color: $black
+    font-weight: 700
+    margin-bottom: 8px
+    display: block
+
+  .footer-link
+    color: $darkgrey
+    border-bottom: 0
+    line-height: 14px
+
+    &:hover
+      color: $black
+      border-bottom: 0
+
+  .footer-bottom
+    background: url('/assets/subfooter-bg.png')
+    height: 60px
+    width: 100%
+    position: absolute
+    bottom: 0
+    padding-top: 18px
+
+    .logo
+      float: left
+      background-image: url('/assets/logo.png')
+      height: 23px
+      width: 113px
+
+    .tagline
+      float: left
+      margin-left: 13px
+
+      a
+        color: $darkgrey
+        border-bottom: 1px solid darken($darkgrey, 25%)
+
+        &:hover
+          color: $grey
+          border-bottom-color: $darkgrey
+
+    .legal
+      a
+        color: $grey
+        font-size: $x-small
+        margin-right: 12px
+        border-bottom: 0
+
+        &:hover
+          color: $lightgrey
+
+    .social
+      a
+        border-bottom: 0
+        float: right
+        margin-left: 12px
+        opacity: 0.6
+
+        &:hover
+          opacity: 1
+
+        img
+          margin-top: 1px
+          width: 22px

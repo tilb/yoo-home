@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= @page_title
+    = yield :meta
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application'
+    = yield :stylesheet
+  body
+    = render :partial => "layouts/header"
+    = yield
+    / = render :partial => "layouts/footer"
+    = yield :javascript

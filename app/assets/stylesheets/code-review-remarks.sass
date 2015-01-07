@@ -1,0 +1,119 @@
+1.1 misc
+
+// layout not in slim (ERB)
+// pages controller does't need these two empty methods, having templates and routes is sufficient
+
+
+1.2 header
+
+// .navigation seems to be too generic (it is just one of two, and they don't have equal names)
+// class .windowed can be applied in slim, no need to use ruby here
+// consider having .tools applied to the top li and not having separate .tools container
+// in fact, .tools and .userpop are very similar. Shall we have a reused element here instead of two separate classes?
+// I don't see the .arrow, what is its purpose?
+// what is the purpose of .clear elements here? can we get rid of them?
+
+
+1.3 roompage
+
+// wide screen cover is tiled (see on my monitor)
+// make content for javascript and a one-line to include JS on a page (like in Roomstyler), then there is no need for yield :head. Btw, JS should go after the body.
+// why the header is rendered from the page template and not from the layout?
+// what's the purpose of the 'a' element in .designer ?
+// what is the purpose of .options-wrapper? can't we just have .options-menu? btw, why options, not just menu?
+// why empty span under each menu item?
+// why name #meta for tabs?
+// why link caption in ruby on the 2nd line for each tab?
+// same question about related rooms
+// why modals are hidden with inline css?
+why mixing p, span, br in modals, can't we just use divs? (simpler slim) //Can't open modal right now, will look into this when I've successfully refactored menu
+can't we use divs instead of spans in buttons? (same reason as above)//Can't open modal right now, will look into this when I've successfully refactored menu
+// btn-green is not green. cursor is not pointer
+we could use a helper for 'credit' stuff use a helper here
+use | for text, there are special symbols to keep leading spaces
+
+
+1.4 pattern library
+in general: demo page needs to be a first-class citizen, so cleaner markup, no inline styles and other bad things
+no need to use Ruby to output static strings, slim can handle it
+no need to br between paragraphs
+why inline gradient is not in CSS but in HTML?
+cover demo should have something in its corners, too
+shall we use different cursor for buttons?
+1.5 SASS
+
+
+1.5.1 base/fonts.sass
+I believe this google url will always make an additional request. Better to download this resouce once and include it in our sources, so that when CSS is build and merged, we have just one compact file. //Is it not better to keep etting it from Google, because of caching?
+
+
+1.5.2 base/general.sass
+// .clearfix can be made nested, easier to read (using &)
+
+
+1.5.3 layout
+// why separate file for a single class .context-wrapper?
+// what is #context about? what context does it relate to?
+// what about #meta? what is it? seems to be something centered with a width we already have declared in grid.
+
+
+1.5.4 layout/header.sass
+// .content - reuse the centered rule from the grid
+// are these generic ul rules really necessary here (margin 42 px). I believe they are overriden by other rules frequently.
+// ul, li - better to use classes, not element names (something to do with navigation?)
+// colors are not connected with the palette (magic numbers)
+// font-sizes are magic numbers, too
+// :first-child and other things - are they supported by IE version we want to support?
+// a lot of nesting with element names like ul li ul a
+// is the popup under the menu the same we have in different parts of the app? if so, it must be made a module and should not be declared in header
+// overall impression - too monolythic and too many rules for a logo + a menu with 2 variations
+
+
+1.5.5 pattern-library
+Why is it impoted under the 'hacks' section in application.sass?
+
+
+1.5.6 states
+>>>>>>>> Not sure if they should be separated from modules. Why .btn-active is in this file, if is is named 'options menu'? Dark and light background are also states, btw. I guess I need to re-read the section about states in the book.
+
+
+1.5.7 modules/buttons
+// I'd set .dark-bg and .light-bg classes on top of buttons, because otherwise container should know that is has buttons and they expect it to have one of these two classes. Better to let the button to decide how to render itself.
+Anyway, it is a big question how are we going to hangle dark/light bg for dynamic images. Not easy.
+// I'd better have plain list of classes like .btn, .btn-light, .btn-dark, .btn-love-dark.
+// Can we declare things like rgba($white, 0.8) in the palette file?
+
+
+1.5.8 modules/cover
+// 'color: white' should be $white (also in other places)
+// shall we use .title class instead of assuming that the title is always h1? btw, it should be 100% wide by default already. I'd use h1.title here (h1 for size etc, .title for positioning).
+// options-wrapper should be always hidden, so it is up to some other 'options' module, not specific for the cover
+
+
+1.5.9 modules/designer
+// The avatar circle looks similar to one we have in the header. Can we make it a separate module (big and small avatar, perhaps) and nest it here?
+// avatar::after is certainly not like we are going to use it. This content is dynamic and will be an img tag. Why all these "after" hacks anyway? It doesn't look like 'after' something, avatar 'here', not 'after'. Hence difficult to read these rules. There must be a strong reason to use this hack.
+// Are there any other labels in .label? If not, I'd call it 'designed-by'.
+// Why link-block. If we want it all be clickable, we can just make the whole .designer an 'a' element, right?
+// Two last :hover rules can be merged.
+
+
+1.5.10 modules/modal
+let's use just classes for consistency, not a mixture of .some-class and p, strong
+last two rules are on the top-level, shouldn't be like this
+
+
+1.5.11 modules/options-menu
+// the top class is named differently, this is confusing
+// shall we put all these rules tigher together, no blank lines and commented out lines?
+what does this :after thing do in this case?
+
+
+1.5.12 modules/related-rooms
+shall it be more generic, like "a list of thumbnails"
+can't we just float them with a right margin always set instead of using tricky nth-child. This way it is more flexible, if we decide, say, having 5 in a row.
+there is an assumption about image sizes, better to declare it somewhere explicitly
+
+
+1.5.13 modules/tabs
+can't we move most of rules under 'li' and only leave padding to 'a'?

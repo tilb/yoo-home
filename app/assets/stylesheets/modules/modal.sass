@@ -1,0 +1,50 @@
+.modal
+  width: 600px
+  z-index: 4
+  display: none
+  // border: 6px solid rgba(0,0,0,0.3)
+  +border-radius(6px)
+  +box-shadow(rgba(black, 0.3) 0 0px 0px 6px)
+  text-align: center
+
+  .modal-title
+    display: block
+    font-size: $large
+    margin-top: 12px
+    color: $black
+
+  .modal-tagline
+    display: block
+    font-size: $regular
+    margin-bottom: 36px
+
+  p
+    margin-bottom: 36px
+
+  strong
+    font-weight: 400
+    color: $black
+
+  .btn
+    // margin-bottom: 36px
+
+  .available-credits
+    display: block
+    font-size: $small
+    margin-bottom: 24px
+    color: $grey
+
+.modal a.close-modal
+  // position: absolute
+  top: 30px
+  right: 30px
+  // display: block
+  // width: 30px
+  // height: 30px
+  text-indent: 0
+  background: none
+  border-bottom: 0
+  color: $grey
+
+.blocker
+  z-index: 3

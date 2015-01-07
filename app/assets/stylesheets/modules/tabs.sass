@@ -1,0 +1,29 @@
+.tabs
+  border-bottom: 1px solid #ddd
+  font-size: $small
+  height: 49px
+  
+  li
+    float: left
+    margin-bottom: -1px
+
+    a
+      display: block
+      padding: 13px 18px
+      border-bottom: 0
+      color: $grey
+      transition: color 0.2s ease
+
+      &:hover
+        color: darken($grey, 10%)
+
+    a.active
+      border: 1px solid #ddd
+      border-bottom: 0
+      +border-top-radius(3px)
+      background: $creme
+      color: $darkgrey
+      font-weight: 400
+
+      &:hover
+        color: $darkgrey

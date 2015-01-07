@@ -1,0 +1,130 @@
+.menu
+  display: none
+  padding: 18px
+  position: absolute
+
+  .menu-list
+    padding: 9px 0
+    background-color: $white-08
+    +border-radius(4px)
+    font-size: $small
+    +box-shadow(rgba(black, 0.4) 0 1px 3px)
+    +single-text-shadow(none)
+
+  .arrow-top-left
+    &:after
+      top: 2px
+      left: 24px
+      margin: 0 auto
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(136, 183, 213, 0)
+      border-bottom-color: rgba($white, 0.8)
+      border-width: 8px
+      // margin-left: -8px
+
+  .arrow-top-center
+    &:after
+      top: 2px
+      left: 50%
+      margin: 0 auto
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(136, 183, 213, 0)
+      border-bottom-color: rgba($white, 0.8)
+      border-width: 8px
+      margin-left: -8px
+
+  .arrow-top-right
+    &:after
+      top: 2px
+      right: 24px
+      margin: 0 auto
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(136, 183, 213, 0)
+      border-bottom-color: rgba($white, 0.8)
+      border-width: 8px
+      // margin-left: -8px
+
+  .arrow-bottom-left
+    &:after
+      bottom: 2px
+      left: 24px
+      margin: 0 auto
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(136, 183, 213, 0)
+      border-top-color: rgba($white, 0.8)
+      border-width: 8px
+      // margin-left: -8px
+
+  .arrow-bottom-center
+    &:after
+      bottom: 2px
+      left: 50%
+      margin: 0 auto
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(136, 183, 213, 0)
+      border-top-color: rgba($white, 0.8)
+      border-width: 8px
+      margin-left: -8px
+
+  .arrow-bottom-right
+    &:after
+      bottom: 2px
+      right: 24px
+      margin: 0 auto
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(136, 183, 213, 0)
+      border-top-color: rgba($white, 0.8)
+      border-width: 8px
+      // margin-left: -8px
+
+  .menu-item
+    display: block
+    transition: 0.3s ease
+    white-space: nowrap
+
+    &:hover
+      background-color: $white
+
+  .menu-link
+    padding: 0px 18px
+    border-bottom: 0
+    color: $darkgrey
+    line-height: 36px
+    display: block
+    width: 100%
+
+.open-menu:hover ~ .menu, .menu:hover
+  display: block
+
+
+

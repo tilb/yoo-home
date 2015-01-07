@@ -1,0 +1,4 @@
+Notes on CSS
+
+Cover
+I can't seem to find a way where I can do this in a separate css file. I need the background-image in the HTML, because it should be dynamic content. If I want a gradient on top of the background-image, I need to add a linear-gradient to the background property. Because I add something inline to the background property, the background-size in my css file gets overwritten somehow

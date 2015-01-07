@@ -1,0 +1,99 @@
+footer.footer
+  .footer-top.column-wrapper.clearfix
+    .column.col-3
+      ul
+        li.footer-category Discover
+        li= link_to "Interiors", "#", class: "footer-link"
+        li= link_to "Moodboards", "#", class: "footer-link"
+        li= link_to "Designers", "#", class: "footer-link"
+    .column.col-3
+      ul
+        li.footer-category Tools
+        li= link_to "3D roomplanner", "#", class: "footer-link"
+        li= link_to "Moodboards", "#", class: "footer-link"
+        li= link_to "Dulux Color Extractor", "#", class: "footer-link"
+    .column.col-3
+      ul
+        li.footer-category Roomstyler
+        li= link_to "Contact us", "#", class: "footer-link"
+        li= link_to "Product Updates", "#", class: "footer-link"
+        li= link_to "For the Press", "#", class: "footer-link"
+        li= link_to "Forum", "#", class: "footer-link"
+    .column.col-3
+      .start
+        span.footer-category Start Creating
+        a href="#"
+          .btn-old-cta Sign Up!
+
+
+  .footer-bottom
+    .column-wrapper
+      .column.col-6
+        .logo
+        .tagline
+          span a product from 
+          = link_to "Floorplanner.com", "#"
+      .column.col-4
+        .legal
+          a href="#" TERMS & CONDITIONS
+          a href="#" PRIVACY
+      column.col-2
+        .social
+          a href="#"
+            img src="/assets/facebook-icon.png"
+          a href="#"
+            img src="/assets/twitter-icon.png"
+          a href="#"
+            img src="/assets/pinterest-icon.png"
+         
+
+
+
+
+
+
+
+
+  / .top
+  /   ul
+  /     li.title Discover
+  /     li= link_to "Interiors", discover_path
+  /     li= link_to "Moodboards", discover_moodboards_path
+  /     li= link_to "Designers", discover_designers_path
+
+    / ul
+    /   li.title Tools
+    /   li= link_to "3D roomplanner", legacy_austin_url('3d'), :class => "windowed"
+    /   li= link_to "Moodboards", legacy_austin_url('montage'), :class => "windowed"
+    /   li= link_to "Dulux Color Extractor", dulux_url
+
+    / ul
+    /   li.title Roomstyler
+    /   li= link_to "Contact us", contact_path
+    /   li= link_to "Product Updates", 'http://floorplanner.io'
+    /   li= link_to "For the Press", press_path
+    /   li= link_to "Forum", forum_root_path
+
+  /   .start
+  /     span.create Start Creating
+  /     - if logged_in?
+  /       a.big-green-button.windowed href=legacy_austin_url('3d') Create a 3D interior!
+  /     - else     
+  /       = link_to "Sign Up!", signup_users_path, :class => "big-green-button popup-link", 'data-size' => 'small'
+  /       span.login
+  /         | or 
+  /         = link_to "Login", login_users_path, :class => "popup-link", 'data-size' => 'small'
+
+  /   .clear
+
+  / .bottom
+  /   a.logo href=root_url
+  /   span a product from 
+  /   = link_to "Floorplanner.com", "http://www.floorplanner.com", :class => "fp-link"
+  /   .center
+  /     = link_to "TERMS & CONDITIONS", terms_path
+  /     = link_to "PRIVACY", privacy_path
+  /   .social
+  /     = link_to "", "https://pinterest.com/roomstyler/", :class => "pinterest"
+  /     = link_to "", "https://twitter.com/roomstyler", :class => "twitter"
+  /     = link_to "", "https://www.facebook.com/roomstyler", :class => "facebook"
