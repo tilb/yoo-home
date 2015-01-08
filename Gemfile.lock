@@ -141,6 +141,7 @@ DEPENDENCIES
   pg
   rails (= 4.1.8)
   rails_12factor
+  sass (~> 3.2.5)
   sass-rails
   sdoc (~> 0.4.0)
   slim-rails
