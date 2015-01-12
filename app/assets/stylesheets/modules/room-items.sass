@@ -1,0 +1,33 @@
+.room-items
+  margin: 30px auto 90px
+  position: relative
+
+  .item
+    float: left
+    overflow: hidden
+    border: 1px solid rgba($black, 0.1)
+
+  .big-item
+    width: 496px
+    height: 496px
+    margin-right: 12px
+
+  .small-item
+    width: 248px
+    height: 242px
+    margin-bottom: 12px
+
+  .slide
+    position: absolute
+    top: 40%
+    opacity: 0.4
+    transition: opacity 0.3s ease
+
+    &:hover
+      opacity: 0.6
+
+  .slide-left
+    left: -120px
+
+  .slide-right
+    right: -120px

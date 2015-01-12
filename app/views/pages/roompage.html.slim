@@ -2,23 +2,34 @@
 / - javascript "room"
 #header.header
   .logo
-  a Design your interior <i class="fa fa-arrow-right"></i>
 .cover style="background: linear-gradient(
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.2) 80%, 
       rgba(0, 0, 0, 0.3) 100%
-    ), url('/assets/yoo-interior.jpeg'); background-size: cover; background-position: center center;" 
-  .cover-content
-    h1.title Culture Dining 1st of may
-    a.cover-corner-left.designer href="#"
-      .avatar.avatar-normal.avatar-bordered
-        img src="assets/test-avatar.jpeg"
-      .name-wrapper
-        .label Designed by
-        .name Katarina Volare
-    .cover-corner-right
-      a.btn.btn-white Remix this Interior
+    ), url('/assets/yoo-interior.jpeg'); background-size: cover; background-position: center center;"
+  .slide.slide-left
+    i class="fa fa-angle-left fa-5x"
+  .slide.slide-right
+    i class="fa fa-angle-right fa-5x"
+.yoo-hacks
+  h1.title Culture Dining 1st of may
+  .buttons
+    a.btn.btn-black href="#" Design your Interior
+    a.btn.btn-black href="#" Remix this Interior
 #bottom
+  / .row.clearfix
+  /   h2.centered Featured Items
+  /   .room-items.col-9.pos-center.clearfix
+  /     .slide.slide-left
+  /       i class="fa fa-angle-left fa-5x"
+  /     .item.big-item
+  /       img src="/assets/furniture-chair.png"
+  /     .item.small-item
+  /       img src="/assets/furniture-cabinet.png"
+  /     .item.small-item
+  /       img src="/assets/furniture-vase.png"
+  /     .slide.slide-right
+  /       i class="fa fa-angle-right fa-5x"
   #details.col-9.pos-center
     ul.tabs
       li
